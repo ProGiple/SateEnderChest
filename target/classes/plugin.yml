@@ -1,0 +1,21 @@
+name: SateEnderChest
+version: '1.0.1'
+main: progiple.satellite.sateenderchest.SateEnderChest
+api-version: '1.16'
+depend:
+  - Vault
+  - PlayerPoints
+  - CMI
+commands:
+  sateenderchest:
+    usage: /sec reload
+    aliases:
+      - sec
+      - sateec
+      - sateender
+      - sateenderc
+      - sateechest
+permissions:
+  sateenderchest.reload:
+    default: op
+    description: право на релод плага.

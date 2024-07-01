@@ -1,0 +1,26 @@
+config:
+  moneyCost: 150000
+  pointsCost: 99
+  errorBuyingSound: BLOCK_ANVIL_PLACE
+  accessBuyingSound: ENTITY_PLAYER_LEVELUP
+
+buy_slot:
+  material: BLUE_STAINED_GLASS_PANE
+  name: "&b Покупка слота"
+  lore:
+    - " "
+    - "&f Стоимость в осколках: &b99 ✦ &7(ЛКМ)"
+    - "&f Стоимость в монетах: &b150,000 ⛃ &7(ПКМ)"
+    - " "
+
+messages:
+  noMoney: "&b(⚡)&f У вас не хватает монеток!"
+  noPoints: "&b(⚡)&f У вас не хватает осколков!"
+  slotBuying: "&b(⚡)&f Слот для эндер-сундука успешно куплен!"
+  reloadPlugin: "&b(⚡)&f Плагин перезагружен!"
+  noPermission: "&b(⚡)&f У вас нет прав на это действие!"
+  title: "&x&0&8&8&F&F&B&koO &x&0&8&8&F&F&BЭ&x&1&2&9&3&F&Bн&x&1&C&9&7&F&Cд&x&2&6&9&C&F&Cе&x&3&0&A&0&F&Cр&x&3&A&A&4&F&D-&x&4&4&A&8&F&DС&x&4&E&A&C&F&Eу&x&5&8&B&0&F&Eн&x&6&2&B&5&F&Eд&x&6&C&B&9&F&Fу&x&7&6&B&D&F&Fк &kOo"
+  subtitle: "&fСлот успешно куплен!"
+
+data:
+  ProGiple: 27
