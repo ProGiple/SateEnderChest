@@ -1,26 +1,53 @@
+debug: false
 config:
-  moneyCost: 150000
-  pointsCost: 99
+  moneyCost: # only vault!
+    enabled: true
+    icon: "⛃"
+    cost: 150000
+  jewelsCost: # only SateJewels!
+    enabled: true
+    icon: "✦"
+    cost: 99
   errorBuyingSound: BLOCK_ANVIL_PLACE
-  accessBuyingSound: ENTITY_PLAYER_LEVELUP
+  successfulBuyingSound: ENTITY_PLAYER_LEVELUP
 
-buy_slot:
-  material: BLUE_STAINED_GLASS_PANE
-  name: "&b Покупка слота"
-  lore:
-    - " "
-    - "&f Стоимость в осколках: &b99 ✦ &7(ЛКМ)"
-    - "&f Стоимость в монетах: &b150,000 ⛃ &7(ПКМ)"
-    - " "
+items:
+  buy_slot:
+    material: LIME_STAINED_GLASS_PANE
+    displayName: "&b Покупка слота"
+    lore:
+      - " "
+      - "&f Стоимость в осколках: &b$cost_jewels $jewels_icon &7(ЛКМ)"
+      - "&f Стоимость в монетах: &b$cost_money $money_icon &7(ПКМ)"
+      - " "
+  closed_slot:
+    material: GRAY_STAINED_GLASS_PANE
+    displayName: "&c Закрытый слот!"
+    lore:
+      - " "
+      - "&f Откройте сначала предыдущий слот!"
+      - " "
+  next_page:
+    material: SPECTRAL_ARROW
+    displayName: "&c Далее"
+    enchanted: true
+    lore:
+      - ""
+  back_page:
+    material: SPECTRAL_ARROW
+    displayName: "&c Обратно"
+    lore:
+      - ""
 
 messages:
+  ecoError: "&b(⚡)&f Ошибка экономики!"
+  noArgs: "&b(⚡)&f У вас не хватает аргументов!"
   noMoney: "&b(⚡)&f У вас не хватает монеток!"
-  noPoints: "&b(⚡)&f У вас не хватает осколков!"
+  noJewels: "&b(⚡)&f У вас не хватает осколков!"
   slotBuying: "&b(⚡)&f Слот для эндер-сундука успешно куплен!"
   reloadPlugin: "&b(⚡)&f Плагин перезагружен!"
   noPermission: "&b(⚡)&f У вас нет прав на это действие!"
-  title: "&x&0&8&8&F&F&B&koO &x&0&8&8&F&F&BЭ&x&1&2&9&3&F&Bн&x&1&C&9&7&F&Cд&x&2&6&9&C&F&Cе&x&3&0&A&0&F&Cр&x&3&A&A&4&F&D-&x&4&4&A&8&F&DС&x&4&E&A&C&F&Eу&x&5&8&B&0&F&Eн&x&6&2&B&5&F&Eд&x&6&C&B&9&F&Fу&x&7&6&B&D&F&Fк &kOo"
-  subtitle: "&fСлот успешно куплен!"
-
-data:
-  ProGiple: 27
+  openEnderChest: "&b(⚡)&f Вы успешно открыли эндер-сундук игроку &b$player!"
+  pageIsMax: "&b(⚡)&f Вы и так на максимальной странице!"
+  pageIsMin: "&b(⚡)&f Вы и так на первой странице!"
+  pageNotBought: "&b(⚡)&f Для начала откройте все слоты на данной странице!" # без права satenderchest.viewpages

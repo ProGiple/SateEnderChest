@@ -1,0 +1,51 @@
+menu:
+  title: "Подтвердить покупку"
+  rows: 3
+  items:
+    decorations:
+      0:
+        material: GRAY_STAINED_GLASS_PANE
+        displayName: ""
+        lore: []
+        slotsStr:
+          - 3-5
+          - 12-14
+          - 21-23
+    clickable:
+      CONFIRM:
+        material: LIME_STAINED_GLASS_PANE
+        displayName: "&a Подтвердить покупку"
+        lore:
+          - " "
+          - "&f Итого к покупке: &b$total_cost $icon_cost"
+          - "&f Номер слота: &b$slot"
+          - " "
+          - "&f Нажмите чтобы купить"
+          - " "
+        slots:
+          - 0
+          - 1
+          - 2
+          - 9
+          - 10
+          - 11
+          - 18
+          - 19
+          - 20
+      CANCEL:
+        material: RED_STAINED_GLASS_PANE
+        displayName: "&c Отменить покупку"
+        lore:
+          - " "
+          - "&f Нажмите чтобы отменить"
+          - " "
+        slots:
+          - 6
+          - 7
+          - 8
+          - 15
+          - 16
+          - 17
+          - 24
+          - 25
+          - 26

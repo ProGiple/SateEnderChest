@@ -9,5 +9,8 @@
         <module name="SateEnderChest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SateJewels" target="14" />
+    </bytecodeTargetLevel>
   </component>
 </project>

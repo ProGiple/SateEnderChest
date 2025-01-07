@@ -2,13 +2,12 @@ name: SateEnderChest
 version: '${project.version}'
 main: progiple.satellite.sateenderchest.SateEnderChest
 api-version: '1.16'
-depend:
-  - Vault
+softdepend:
+  - SateJewels
   - PlayerPoints
-  - CMI
+  - Vault
 commands:
   sateenderchest:
-    usage: /sec reload
     aliases:
       - sec
       - sateec
@@ -16,6 +15,11 @@ commands:
       - sateenderc
       - sateechest
 permissions:
-  sateenderchest.reload:
+  sateenderchest.open:
+    default: true
+  sateenderchest.admin:
     default: op
-    description: право на релод плага.
+  sateenderchest.bypass:
+    default: false
+  sateenderchest.viewpages:
+    default: false

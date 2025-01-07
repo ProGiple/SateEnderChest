@@ -1,0 +1,9 @@
+pages:
+  0:
+    openedSlots: 5
+    items:
+      11: ItemStack
+  1:
+    openedSlots: 0
+    items:
+      0: ItemStack

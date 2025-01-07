@@ -1,0 +1,21 @@
+title: "Эндер-чест [$1+page / $max_pages]" # $1+page = $page + 1 // $1+max_pages
+pages:
+  0: # первая страница при открытии
+    rows: 6
+    unicalTitle: "" # оставьте пустым, если хотите юзать общий title
+    slotsStartsFrom: 5 # с какого слота начать заполнять слоты?
+    buttons:
+      nextPage: 53
+  1:
+    rows: 6
+    unicalTitle: ""
+    slotsStartsFrom: 0
+    buttons:
+      nextPage: 53
+      backPage: 52
+  2:
+    rows: 6
+    unicalTitle: ""
+    slotsStartsFrom: 0
+    buttons:
+      backPage: 53

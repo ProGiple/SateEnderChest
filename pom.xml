@@ -6,7 +6,7 @@
 
   <groupId>progiple.satellite</groupId>
   <artifactId>SateEnderChest</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
 
   <name>SateEnderChest</name>
@@ -23,8 +23,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <source>14</source>
+          <target>14</target>
         </configuration>
       </plugin>
       <plugin>
@@ -51,6 +51,10 @@
 
   <repositories>
       <repository>
+          <id>jitpack.io</id>
+          <url>https://jitpack.io</url>
+      </repository>
+      <repository>
           <id>papermc-repo</id>
           <url>https://repo.papermc.io/repository/maven-public/</url>
       </repository>
@@ -58,17 +62,19 @@
           <id>sonatype</id>
           <url>https://oss.sonatype.org/content/groups/public/</url>
       </repository>
-      <repository>
-          <id>rosewood-repo</id>
-          <url>https://repo.rosewooddev.io/repository/public/</url>
-      </repository>
-      <repository>
-          <id>jitpack.io</id>
-          <url>https://jitpack.io</url>
-      </repository>
   </repositories>
 
   <dependencies>
+      <dependency>
+          <groupId>com.github.ProGiple</groupId>
+          <artifactId>SateJewels</artifactId>
+          <version>1.0.5.5</version>
+      </dependency>
+      <dependency>
+          <groupId>com.github.NovaSparkle</groupId>
+          <artifactId>LunaSpring</artifactId>
+          <version>2.0.3</version>
+      </dependency>
       <dependency>
           <groupId>com.destroystokyo.paper</groupId>
           <artifactId>paper-api</artifactId>
@@ -76,15 +82,15 @@
           <scope>provided</scope>
       </dependency>
       <dependency>
-          <groupId>org.black_ixx</groupId>
-          <artifactId>playerpoints</artifactId>
-          <version>3.2.7</version>
-          <scope>provided</scope>
-      </dependency>
-      <dependency>
           <groupId>com.github.MilkBowl</groupId>
           <artifactId>VaultAPI</artifactId>
           <version>1.7</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>1.18.30</version>
           <scope>provided</scope>
       </dependency>
   </dependencies>
