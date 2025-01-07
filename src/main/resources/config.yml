@@ -13,41 +13,45 @@ config:
 
 items:
   buy_slot:
-    material: LIME_STAINED_GLASS_PANE
-    displayName: "&b Покупка слота"
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    displayName: "&x&2&A&8&8&F&8 Покупка слота"
     lore:
       - " "
-      - "&f Стоимость в осколках: &b$cost_jewels $jewels_icon &7(ЛКМ)"
-      - "&f Стоимость в монетах: &b$cost_money $money_icon &7(ПКМ)"
+      - "&f Стоимость в осколках: &x&2&A&8&8&F&8$cost_jewels $jewels_icon &7(ЛКМ)"
+      - "&f Стоимость в монетах: &x&2&A&8&8&F&8$cost_money $money_icon &7(ПКМ)"
+      - " "
+      - "&x&2&A&8&8&F&8 ⁝ &fОткрывайте слоты за &x&2&A&8&8&F&8осколки"
+      - "&x&3&D&9&2&F&7 ⁝ &x&2&A&8&8&F&8Или монеты&f, чтобы в ваш эндер"
+      - "&x&4&F&9&B&F&6 ⁝ &fСундук можно было &x&2&A&8&8&F&8положить"
+      - "&x&6&2&A&5&F&5 ⁝ &fКак можно &x&2&A&8&8&F&8больше предметов!"
       - " "
   closed_slot:
     material: GRAY_STAINED_GLASS_PANE
     displayName: "&c Закрытый слот!"
     lore:
       - " "
-      - "&f Откройте сначала предыдущий слот!"
+      - "&c ⁝ &fЧтобы купить &cданный слот,"
+      - "&c ⁝ &fКупите сначала предыдущий!"
       - " "
   next_page:
     material: SPECTRAL_ARROW
-    displayName: "&c Далее"
+    displayName: "&x&2&A&8&8&F&8 Следующая страница »"
     enchanted: true
-    lore:
-      - ""
+    lore: []
   back_page:
     material: SPECTRAL_ARROW
-    displayName: "&c Обратно"
-    lore:
-      - ""
+    displayName: "&x&2&A&8&8&F&8 « Предыдущая страница"
+    lore: []
 
 messages:
-  ecoError: "&b(⚡)&f Ошибка экономики!"
-  noArgs: "&b(⚡)&f У вас не хватает аргументов!"
-  noMoney: "&b(⚡)&f У вас не хватает монеток!"
-  noJewels: "&b(⚡)&f У вас не хватает осколков!"
-  slotBuying: "&b(⚡)&f Слот для эндер-сундука успешно куплен!"
-  reloadPlugin: "&b(⚡)&f Плагин перезагружен!"
-  noPermission: "&b(⚡)&f У вас нет прав на это действие!"
-  openEnderChest: "&b(⚡)&f Вы успешно открыли эндер-сундук игроку &b$player!"
-  pageIsMax: "&b(⚡)&f Вы и так на максимальной странице!"
-  pageIsMin: "&b(⚡)&f Вы и так на первой странице!"
-  pageNotBought: "&b(⚡)&f Для начала откройте все слоты на данной странице!" # без права satenderchest.viewpages
+  ecoError: "&x&2&A&8&8&F&8(⚡)&f Ошибка экономики!"
+  noArgs: "&x&2&A&8&8&F&8(⚡)&f У вас не хватает аргументов!"
+  noMoney: "&x&2&A&8&8&F&8(⚡)&f У вас не хватает монеток!"
+  noJewels: "&x&2&A&8&8&F&8(⚡)&f У вас не хватает осколков!"
+  slotBuying: "&x&2&A&8&8&F&8(⚡)&f Слот для эндер-сундука успешно куплен!"
+  reloadPlugin: "&x&2&A&8&8&F&8(⚡)&f Плагин перезагружен!"
+  noPermission: "&x&2&A&8&8&F&8(⚡)&f У вас нет прав на это действие!"
+  openEnderChest: "&x&2&A&8&8&F&8(⚡)&f Вы успешно открыли эндер-сундук игроку &x&2&A&8&8&F&8$player!"
+  pageIsMax: "&x&2&A&8&8&F&8(⚡)&f Вы и так на максимальной странице!"
+  pageIsMin: "&x&2&A&8&8&F&8(⚡)&f Вы и так на первой странице!"
+  pageNotBought: "&x&2&A&8&8&F&8(⚡)&f Для начала откройте все слоты на данной странице!" # без права satenderchest.viewpages
