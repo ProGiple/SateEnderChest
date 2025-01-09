@@ -4,7 +4,7 @@
   <groupId>progiple.satellite</groupId>
   <artifactId>SateEnderChest</artifactId>
   <name>SateEnderChest</name>
-  <version>1.0.6</version>
+  <version>1.0.6F</version>
   <build>
     <resources>
       <resource>
