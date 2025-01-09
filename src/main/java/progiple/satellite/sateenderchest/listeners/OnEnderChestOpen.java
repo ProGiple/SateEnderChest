@@ -16,7 +16,6 @@ public class OnEnderChestOpen implements Listener {
         if (e.getInventory().getType() == InventoryType.ENDER_CHEST) {
             Player player = (Player) e.getPlayer();
             player.closeInventory();
-            e.setCancelled(true);
 
             if (!PlayerData.getPlayerDataMap().containsKey(player.getName())) new PlayerData(player.getName());
             MenuManager.openInventory(player, new ECMenu(player, Page.getPageMap().get((byte) 0)));

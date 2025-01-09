@@ -5,7 +5,7 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
-import org.novasparkle.lunaspring.Items.Item;
+import org.novasparkle.lunaspring.Menus.Items.Item;
 import org.novasparkle.lunaspring.Menus.MenuManager;
 import progiple.satellite.sateenderchest.enderchest.Button;
 import progiple.satellite.sateenderchest.enderchest.confirm_menu.ConfirmMenu;
@@ -32,7 +32,7 @@ public class BuyButton extends Item implements Button {
     }
 
     @Override
-    public boolean onClick(Player player, Inventory inventory) {
+    public void onClick(Player player, Inventory inventory) {
         String type = this.clickType.isLeftClick() ? "jewelsCost" : "moneyCost";
         String reversedType = this.clickType.isLeftClick() ? "moneyCost" : "jewelsCost";
 
@@ -52,12 +52,11 @@ public class BuyButton extends Item implements Button {
             }
             else {
                 player.sendMessage(Config.getMessage("ecoError"));
-                return false;
+                return;
             }
         }
 
         ConfirmMenu confirmMenu = new ConfirmMenu(player, economyType, icon, totalCost, this.pageNum, this.slot);
         MenuManager.openInventory(player, confirmMenu);
-        return false;
     }
 }

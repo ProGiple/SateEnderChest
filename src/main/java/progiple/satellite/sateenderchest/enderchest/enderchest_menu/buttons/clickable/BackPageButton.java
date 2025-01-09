@@ -4,7 +4,7 @@ import org.bukkit.Sound;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.novasparkle.lunaspring.Items.Item;
+import org.novasparkle.lunaspring.Menus.Items.Item;
 import org.novasparkle.lunaspring.Menus.MenuManager;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.ECMenu;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.Page;
@@ -21,17 +21,16 @@ public class BackPageButton extends Item implements Button {
     }
 
     @Override
-    public boolean onClick(Player player, Inventory inventory) {
+    public void onClick(Player player, Inventory inventory) {
         Page page = Page.getPageMap().get((byte) (this.thisPage - 1));
         Utils.debug(page);
         if (page == null || this.thisPage <= 0) {
             player.sendMessage(Config.getMessage("pageIsMin"));
             Sound errorSound = Sound.valueOf(Config.getString("config.errorBuyingSound"));
             player.playSound(player.getLocation(), errorSound, 1, 1);
-            return false;
+            return;
         }
 
         MenuManager.openInventory(player, new ECMenu(player, page));
-        return true;
     }
 }

@@ -7,5 +7,5 @@ import org.bukkit.inventory.ItemStack;
 public interface Button {
     ItemStack getItemStack();
     byte getSlot();
-    boolean onClick(Player player, Inventory inventory);
+    void onClick(Player player, Inventory inventory);
 }

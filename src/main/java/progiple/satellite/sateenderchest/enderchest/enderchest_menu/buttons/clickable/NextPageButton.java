@@ -4,7 +4,7 @@ import org.bukkit.Sound;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.novasparkle.lunaspring.Items.Item;
+import org.novasparkle.lunaspring.Menus.Items.Item;
 import org.novasparkle.lunaspring.Menus.MenuManager;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.ECMenu;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.Page;
@@ -24,7 +24,7 @@ public class NextPageButton extends Item implements Button {
     }
 
     @Override
-    public boolean onClick(Player player, Inventory inventory) {
+    public void onClick(Player player, Inventory inventory) {
         byte newPage = (byte) (this.thisPage + 1);
         Page page = Page.getPageMap().get(newPage);
 
@@ -33,18 +33,17 @@ public class NextPageButton extends Item implements Button {
         if (page == null || newPage > PageManager.getMaxPageNum()) {
             player.sendMessage(Config.getMessage("pageIsMax"));
             player.playSound(player.getLocation(), errorSound, 1, 1);
-            return false;
+            return;
         }
 
         if (!player.hasPermission("sateenderchest.viewpages") && !player.hasPermission("sateenderchest.bypass")) {
             if (!this.isEnded) {
                 player.sendMessage(Config.getMessage("pageNotBought"));
                 player.playSound(player.getLocation(), errorSound, 1, 1);
-                return false;
+                return;
             }
         }
 
         MenuManager.openInventory(player, new ECMenu(player, page));
-        return true;
     }
 }

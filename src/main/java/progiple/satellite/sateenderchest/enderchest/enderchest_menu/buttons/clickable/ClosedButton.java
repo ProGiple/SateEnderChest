@@ -3,7 +3,7 @@ package progiple.satellite.sateenderchest.enderchest.enderchest_menu.buttons.cli
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.novasparkle.lunaspring.Items.Item;
+import org.novasparkle.lunaspring.Menus.Items.Item;
 import progiple.satellite.sateenderchest.enderchest.Button;
 import progiple.satellite.sateenderchest.other.configs.Config;
 
@@ -21,7 +21,6 @@ public class ClosedButton extends Item implements Button {
     }
 
     @Override
-    public boolean onClick(Player player, Inventory inventory) {
-        return false;
+    public void onClick(Player player, Inventory inventory) {
     }
 }

@@ -4,7 +4,7 @@ import org.bukkit.Sound;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.novasparkle.lunaspring.Items.Item;
+import org.novasparkle.lunaspring.Menus.Items.Item;
 import org.novasparkle.lunaspring.Menus.MenuManager;
 import org.satellite.progiple.satejewels.api.SJAPI;
 import progiple.satellite.sateenderchest.enderchest.Button;
@@ -40,32 +40,26 @@ public class ConfirmButton extends Item implements Button {
     }
 
     @Override
-    public boolean onClick(Player player, Inventory inventory) {
+    public void onClick(Player player, Inventory inventory) {
         Utils.debug(this.economyType);
         Utils.debug(Vault.getEconomy());
-        Utils.debug(SateJewels.isEnabled() ? SJAPI.isNotNull() : "false");
         if (this.economyType == EconomyType.VAULT && Vault.getEconomy() != null) {
             if (Vault.getEconomy().getBalance(player) < this.cost) {
                 player.sendMessage(Config.getMessage("noMoney"));
-                return false;
+                return;
             }
 
             Vault.getEconomy().withdrawPlayer(player, this.cost);
         }
         else if (this.economyType == EconomyType.SATEJEWELS && SateJewels.isEnabled()) {
-            boolean next = false;
-            if (!SJAPI.isNotNull()) next = SJAPI.additiveLoad();
+            if (SJAPI.getJewels(player) < this.cost) {
+                player.sendMessage(Config.getMessage("noJewels"));
+                return;
 
-            if (next || SJAPI.isNotNull()) {
-                if (SJAPI.getJewels(player) < this.cost) {
-                    player.sendMessage(Config.getMessage("noJewels"));
-                    return false;
-                }
-
-                SJAPI.removeJewels(player, this.cost);
+                // SJAPI.removeJewels(player, this.cost);
             }
         }
-        else return false;
+        else return;
 
         PlayerData playerData = PlayerData.getPlayerDataMap().get(player.getName());
         Utils.debug(this.pageNum);
@@ -75,6 +69,5 @@ public class ConfirmButton extends Item implements Button {
         player.playSound(player.getLocation(), Sound.valueOf(Config.getString("config.successfulBuyingSound")), 1, 1);
 
         MenuManager.openInventory(player, new ECMenu(player, Page.getPageMap().get(this.pageNum)));
-        return true;
     }
 }

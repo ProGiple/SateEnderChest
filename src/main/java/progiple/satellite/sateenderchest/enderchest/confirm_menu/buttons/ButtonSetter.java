@@ -2,7 +2,7 @@ package progiple.satellite.sateenderchest.enderchest.confirm_menu.buttons;
 
 import lombok.Getter;
 import org.bukkit.configuration.ConfigurationSection;
-import org.novasparkle.lunaspring.Items.Item;
+import org.novasparkle.lunaspring.Menus.Items.Item;
 import progiple.satellite.sateenderchest.enderchest.confirm_menu.buttons.clickable.CancelButton;
 import progiple.satellite.sateenderchest.enderchest.confirm_menu.buttons.clickable.ConfirmButton;
 import progiple.satellite.sateenderchest.other.EconomyType;
