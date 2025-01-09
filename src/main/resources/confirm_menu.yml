@@ -7,7 +7,7 @@ menu:
         material: GRAY_STAINED_GLASS_PANE
         displayName: "&8 Разделитель"
         lore: []
-        slotsInt:
+        slots:
           - 4
           - 13
           - 22
