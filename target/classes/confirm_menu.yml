@@ -1,51 +1,66 @@
 menu:
-  title: "Подтвердить покупку"
-  rows: 3
+  title: "&0Подтвердить покупку"
+  rows: 4
   items:
     decorations:
       0:
         material: GRAY_STAINED_GLASS_PANE
-        displayName: ""
+        displayName: "&8 Разделитель"
         lore: []
-        slotsStr:
-          - 3-5
-          - 12-14
-          - 21-23
+        slots:
+          - 4
+          - 13
+          - 22
+          - 31
     clickable:
       CONFIRM:
         material: LIME_STAINED_GLASS_PANE
         displayName: "&a Подтвердить покупку"
         lore:
           - " "
-          - "&f Итого к покупке: &b$total_cost $icon_cost"
-          - "&f Номер слота: &b$slot"
+          - "&a ⁝ &fИтого к покупке: &a$total_cost $icon_cost"
+          - "&a ⁝ &fНомер слота: &a$1+slot"
           - " "
-          - "&f Нажмите чтобы купить"
+          - "&a ⁝ &fНажмите чтобы купить"
           - " "
         slots:
           - 0
           - 1
           - 2
+          - 3
           - 9
           - 10
           - 11
+          - 12
           - 18
           - 19
           - 20
+          - 21
+          - 27
+          - 28
+          - 29
+          - 30
       CANCEL:
         material: RED_STAINED_GLASS_PANE
         displayName: "&c Отменить покупку"
         lore:
           - " "
-          - "&f Нажмите чтобы отменить"
+          - "&c ⁝ &fНажмите чтобы &cотменить"
           - " "
         slots:
+          - 5
           - 6
           - 7
           - 8
+          - 14
           - 15
           - 16
           - 17
+          - 23
           - 24
           - 25
           - 26
+          - 32
+          - 33
+          - 34
+          - 35
