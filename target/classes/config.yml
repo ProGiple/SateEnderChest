@@ -1,5 +1,6 @@
 debug: false
 config:
+  disablePutBackpacks: true # выключить возможность класть рюкзаки из плагина SateBackpacks в эндер-сундук?
   moneyCost: # only vault!
     enabled: true
     icon: "⛃"
@@ -10,6 +11,10 @@ config:
     cost: 99
   errorBuyingSound: BLOCK_ANVIL_PLACE
   successfulBuyingSound: ENTITY_PLAYER_LEVELUP
+  itemsBlackList:
+    - MATERIAL
+    - BEDROCK
+    - BARRIER
 
 items:
   buy_slot:
@@ -54,4 +59,5 @@ messages:
   openEnderChest: "&x&2&A&8&8&F&8(⚡)&f Вы успешно открыли эндер-сундук игроку &x&2&A&8&8&F&8$player!"
   pageIsMax: "&x&2&A&8&8&F&8(⚡)&f Вы и так на максимальной странице!"
   pageIsMin: "&x&2&A&8&8&F&8(⚡)&f Вы и так на первой странице!"
-  pageNotBought: "&x&2&A&8&8&F&8(⚡)&f Для начала откройте все слоты на данной странице!" # без права satenderchest.viewpages
+  pageNotBought: "&x&2&A&8&8&F&8(⚡)&f Для начала откройте все слоты на данной странице!" # без права sateenderchest.viewpages / sateenderchest.bypass
+  itemInBlacklist: "&x&2&A&8&8&F&8(⚡)&f Этот предмет нельзя положить в эндер-сундук!" # без права sateenderchest.bypass

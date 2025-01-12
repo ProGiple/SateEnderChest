@@ -1,5 +1,7 @@
 package progiple.satellite.sateenderchest.enderchest.enderchest_menu;
 
+import de.tr7zw.nbtapi.NBT;
+import de.tr7zw.nbtapi.iface.ReadableNBT;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -54,6 +56,18 @@ public class ECMenu extends AMenu {
     public void onClick(InventoryClickEvent e) {
         ItemStack itemStack = e.getCurrentItem();
         if (itemStack == null || itemStack.getType() == Material.AIR) return;
+
+        boolean isBackPack = false;
+        ReadableNBT readableNBT = NBT.readNbt(itemStack);
+        if (readableNBT.hasTag("backpack-id")) isBackPack = true;
+
+        if (!e.getWhoClicked().hasPermission("sateenderchest.bypass") &&
+                (Config.getSection("config").getStringList("itemsBlackList").contains(itemStack.getType().name()) ||
+                        (Config.getBool("config.disablePutBackpacks") && isBackPack))) {
+            e.setCancelled(true);
+            e.getWhoClicked().sendMessage(Config.getMessage("itemInBlacklist"));
+            return;
+        }
 
         for (Item item : this.itemList) {
             if (item.getItemStack().equals(itemStack)) {

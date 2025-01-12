@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.novasparkle.lunaspring.Menus.Items.Item;
 import org.novasparkle.lunaspring.Menus.MenuManager;
-import org.satellite.progiple.satejewels.api.SJAPI;
+import progiple.satellite.sateenderchest.SateEnderChest;
 import progiple.satellite.sateenderchest.enderchest.Button;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.ECMenu;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.Page;
@@ -48,16 +48,14 @@ public class ConfirmButton extends Item implements Button {
                 player.sendMessage(Config.getMessage("noMoney"));
                 return;
             }
-
             Vault.getEconomy().withdrawPlayer(player, this.cost);
         }
-        else if (this.economyType == EconomyType.SATEJEWELS && SateJewels.isEnabled()) {
-            if (SJAPI.getJewels(player) < this.cost) {
+        else if (this.economyType == EconomyType.SATEJEWELS && SateJewels.getSjapi() != null) {
+            if (SateJewels.getSjapi().getJewels(player) < this.cost) {
                 player.sendMessage(Config.getMessage("noJewels"));
                 return;
-
-                // SJAPI.removeJewels(player, this.cost);
             }
+            SateJewels.getSjapi().removeJewels(player, this.cost);
         }
         else return;
 

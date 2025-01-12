@@ -6,6 +6,7 @@ softdepend:
   - SateJewels
   - PlayerPoints
   - Vault
+  - NBTAPI
 commands:
   sateenderchest:
     aliases:

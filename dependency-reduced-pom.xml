@@ -4,7 +4,7 @@
   <groupId>progiple.satellite</groupId>
   <artifactId>SateEnderChest</artifactId>
   <name>SateEnderChest</name>
-  <version>1.0.6F</version>
+  <version>1.0.7.2</version>
   <build>
     <resources>
       <resource>
@@ -30,6 +30,14 @@
             <goals>
               <goal>shade</goal>
             </goals>
+            <configuration>
+              <transformers>
+                <transformer>
+                  <mainClass>progiple.satellite.sateenderchest.SateEnderChest</mainClass>
+                </transformer>
+              </transformers>
+              <minimizeJar>true</minimizeJar>
+            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -48,8 +56,18 @@
       <id>sonatype</id>
       <url>https://oss.sonatype.org/content/groups/public/</url>
     </repository>
+    <repository>
+      <id>codemc-repo</id>
+      <url>https://repo.codemc.io/repository/maven-public/</url>
+    </repository>
   </repositories>
   <dependencies>
+    <dependency>
+      <groupId>com.github.ProGiple</groupId>
+      <artifactId>SateJewels</artifactId>
+      <version>1.1.4</version>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>com.destroystokyo.paper</groupId>
       <artifactId>paper-api</artifactId>
@@ -59,13 +77,19 @@
     <dependency>
       <groupId>com.github.MilkBowl</groupId>
       <artifactId>VaultAPI</artifactId>
-      <version>1.7</version>
+      <version>1.7.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.30</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>de.tr7zw</groupId>
+      <artifactId>item-nbt-api-plugin</artifactId>
+      <version>2.14.1</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>

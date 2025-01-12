@@ -1,11 +1,12 @@
 name: SateEnderChest
-version: '1.0.6F'
+version: '1.0.7.2'
 main: progiple.satellite.sateenderchest.SateEnderChest
 api-version: '1.16'
 softdepend:
   - SateJewels
   - PlayerPoints
   - Vault
+  - NBTAPI
 commands:
   sateenderchest:
     aliases:
