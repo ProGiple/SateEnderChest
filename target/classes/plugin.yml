@@ -1,5 +1,5 @@
 name: SateEnderChest
-version: '1.0.7.2'
+version: '1.0.7.3'
 main: progiple.satellite.sateenderchest.SateEnderChest
 api-version: '1.16'
 softdepend:
@@ -10,6 +10,7 @@ softdepend:
 commands:
   sateenderchest:
     aliases:
+      - ec
       - sec
       - sateec
       - sateender

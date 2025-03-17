@@ -6,7 +6,7 @@ config:
     icon: "⛃"
     cost: 150000
   jewelsCost: # only SateJewels!
-    enabled: true
+    enabled: false
     icon: "✦"
     cost: 99
   errorBuyingSound: BLOCK_ANVIL_PLACE

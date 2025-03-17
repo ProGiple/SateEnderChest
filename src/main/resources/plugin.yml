@@ -10,6 +10,7 @@ softdepend:
 commands:
   sateenderchest:
     aliases:
+      - ec
       - sec
       - sateec
       - sateender

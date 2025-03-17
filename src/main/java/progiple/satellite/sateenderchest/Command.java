@@ -26,11 +26,11 @@ public class Command implements CommandExecutor, TabCompleter {
             switch (args[0]) {
                 case "open" -> {
                     if (args.length >= 2) {
-                        if (commandSender.hasPermission("sateenderchest.admin")) {
+                        if (commandSender.hasPermission("sateenderchest.admin") && commandSender instanceof Player) {
                             Player player = Bukkit.getPlayerExact(args[1]);
                             if (player != null) {
                                 commandSender.sendMessage(Config.getMessage("openEnderChest").replace("$player", args[1]));
-                                this.open(player);
+                                MenuManager.openInventory(player, new ECMenu(player, Page.getPageMap().get((byte) 0)));
                             }
                         }
                         else commandSender.sendMessage(Config.getMessage("noPermission"));
