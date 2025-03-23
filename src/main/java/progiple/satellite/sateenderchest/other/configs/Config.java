@@ -3,8 +3,8 @@ package progiple.satellite.sateenderchest.other.configs;
 import lombok.experimental.UtilityClass;
 import org.bukkit.configuration.ConfigurationSection;
 import org.novasparkle.lunaspring.Configuration.IConfig;
+import org.novasparkle.lunaspring.Util.Utils;
 import progiple.satellite.sateenderchest.SateEnderChest;
-import progiple.satellite.sateenderchest.other.Utils;
 
 @UtilityClass
 public class Config {

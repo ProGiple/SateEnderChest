@@ -36,7 +36,7 @@ public class ConfirmMenu extends AMenu {
         ItemStack itemStack = e.getCurrentItem();
         if (itemStack == null || itemStack.getType() == Material.AIR) return;
 
-        for (Item item : this.itemList) {
+        for (Item item : this.buttonSetter.getItemList()) {
             if (item.getItemStack().equals(itemStack)) {
                 ((Button) item).onClick(this.getPlayer(), this.getInventory());
                 break;

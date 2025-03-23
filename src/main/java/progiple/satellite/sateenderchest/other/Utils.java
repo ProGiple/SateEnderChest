@@ -1,17 +1,12 @@
 package progiple.satellite.sateenderchest.other;
 
 import lombok.experimental.UtilityClass;
-import org.bukkit.ChatColor;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.Page;
 import progiple.satellite.sateenderchest.other.configs.Config;
 import progiple.satellite.sateenderchest.other.configs.PageManager;
 
 @UtilityClass
 public class Utils {
-    public String color(String str) {
-        return ChatColor.translateAlternateColorCodes('&', str);
-    }
-
     public void loadPages() {
         Page.getPageMap().clear();
         for (String pageId : PageManager.getSection("pages").getKeys(false)) {

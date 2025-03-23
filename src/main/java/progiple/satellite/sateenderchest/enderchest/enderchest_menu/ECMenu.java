@@ -69,7 +69,7 @@ public class ECMenu extends AMenu {
             return;
         }
 
-        for (Item item : this.itemList) {
+        for (Item item : this.findItems(itemStack)) {
             if (item.getItemStack().equals(itemStack)) {
                 e.setCancelled(true);
                 if (item instanceof BuyButton) {

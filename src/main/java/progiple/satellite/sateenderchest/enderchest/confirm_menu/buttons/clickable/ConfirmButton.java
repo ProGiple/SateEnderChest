@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.novasparkle.lunaspring.Menus.Items.Item;
 import org.novasparkle.lunaspring.Menus.MenuManager;
-import progiple.satellite.sateenderchest.SateEnderChest;
 import progiple.satellite.sateenderchest.enderchest.Button;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.ECMenu;
 import progiple.satellite.sateenderchest.enderchest.enderchest_menu.Page;
@@ -35,7 +34,7 @@ public class ConfirmButton extends Item implements Button {
                 .replace("$total_cost", String.valueOf(this.cost))
                 .replace("$slot", String.valueOf(targetSlot))
                 .replace("$1+slot", String.valueOf(targetSlot + 1))
-                .replace("$icon_cost", Utils.color(icon)));
+                .replace("$icon_cost", org.novasparkle.lunaspring.Util.Utils.color(icon)));
         this.setLore(this.getLore());
     }
 
